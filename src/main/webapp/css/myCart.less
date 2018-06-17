@@ -1,0 +1,273 @@
+@small:0.86rem;
+@common:1.0rem;
+@big:1.29rem;
+@bgColor:#f7f7f7;
+@bordercolor:#e7e7e7;
+@colorpsg:#777;
+@colortitle:#3c3c3c;
+body,html,p,h1,h2,h3,h4,h5,h6,ul,li,input,div,table,tr,td,i,sub,sup{
+	margin:0;
+	padding: 0;
+}
+body{
+	width: 70%;
+	margin: 0 auto;
+	font-family: "微软雅黑, Tahoma, Helvetica, Arial, 宋体, sans-serif";
+}
+@media screen and (min-width: 1420px){
+	body{
+		width: 60%;
+	}
+}
+@media screen and (max-width: 1400px) {
+	html{
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	html{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 970px) {
+	html{
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 900px) {
+	html{
+		font-size: 10px;
+	}
+}
+/* 当浏览器的可视区域小于650px */
+@media screen and (max-width: 770px) {
+	html{
+		font-size: 8px;
+	}
+}
+
+
+// 我的购物车
+.shopCart{
+
+	//当前位置
+	.location{
+
+	}
+
+	//购物车商品
+	.cartWrapper{
+
+		color: @colorpsg;
+		//共同样式
+		td,li{
+			position: relative;
+			// padding: 0.71rem 2.14rem;
+		}
+		.selectbox{
+			// position: relative;
+			// left: 1.79rem;
+			padding: 0 0.36rem;
+		}
+		//购物车头部
+		.cartHead{
+			padding-top: 1.07rem;
+			background: @bgColor;
+			display: flex;
+			justify-content: space-between;
+
+			ul{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				li{
+					position: relative;
+					list-style: none;
+					// display: block;
+					margin: 0;
+				}
+			}
+		}
+
+		//购物车中商品列表
+		.cart-goods-lists{
+			width: 100%;
+			// padding: 0.71rem 0;
+			.table{
+				width: 100%;
+			}
+			tr{
+				position: relative;
+			}
+			td{
+				display: inline-block;
+			}
+			.col1{
+
+				display: flex;
+				// width: 100%;
+				background: @bgColor;
+				justify-content: space-between;
+				// padding: 10px 0;
+				td{
+					// justify-content: space-around;
+					padding: 0.71rem 0;
+					width: 7.14rem;
+				}
+
+				.webcheck{
+					// padding-left: 4.64rem;
+				}
+			}
+			.col2{
+				// text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				td{
+
+				}
+				td:nth-child(1){
+					width: 3.71rem;
+					margin: 1.79rem 0;
+					padding-left: 0;
+				}
+				td:nth-child(2){
+					
+				}
+				td:nth-child(3){
+					position: relative;
+
+				}
+				td:nth-child(4){
+
+				}
+				td:nth-child(5){
+
+				}
+				.num-change{
+					position: relative;
+					top: 0.71rem;
+
+					&:hover{
+					cursor: pointer;
+					}
+					sup{
+						position: relative;
+						bottom: 0.86rem;
+					}
+					sub{
+						position: relative;
+						left: -20px;
+					}
+				}
+				.item-num{
+
+					input{
+						display: inline-block;
+						width: 20px;
+						padding: 0.21rem;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		//购物车尾部
+		.cartfooter{
+			margin-bottom:20px;
+			background: @bgColor;
+			display: flex;
+			justify-content: space-between;
+			div{
+				// display: inline-block;
+				// justify-content: space-between;
+				// padding: 1.07rem;
+				cursor: pointer;
+
+				&:hover{
+					color: red;
+				}
+			}
+			div.compute{
+				input{
+					background: red;
+					color: #fff;
+					padding:0.36rem 0.71rem;
+					border-radius: 0.36rem;
+					outline: none;
+					border: none;
+
+					&:hover{
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+//栏目标题
+h1.title{
+	display: inline-block;
+	margin-bottom: 1.43rem;
+	padding: 0.71rem 0;
+	color: @colortitle;
+	font-size: @big;
+	border-bottom: 0.14rem solid red;
+}
+
+// 商品列表
+ul.goods-lists{
+	// width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	// justify-content: space-between;
+	li.goods-item{
+		width: 10.0rem;
+		list-style: none;
+		padding: 1.07rem;
+		margin: 0.71rem 0.57rem;
+		border: 0.07rem solid red;
+
+		div.item-wrapper{
+			a{
+				display: inline-block;
+				img{
+					width: 8.57rem;
+					height: 8.57rem;
+					transition: all 0.8s;
+					&:hover{
+						transform: scale(1.2);
+						overflow: hidden;
+					}
+				}
+			}
+
+			.goods-title{
+				padding: 1.07rem 0;
+				font-size: @small;
+			}
+
+			.goods-info{
+				font-size: @small;
+
+				span.goods-price{
+					display: inline-block;
+					padding-right: 0.71rem;
+
+
+					sub{
+						color: red;
+					}
+				}
+
+				span.goods-sales{
+
+				}
+			}
+		}
+
+	}//li.goods-item
+}

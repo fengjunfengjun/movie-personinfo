@@ -1,0 +1,115 @@
+@colorgreen:green;
+@backgroundColor:#e2e2e2;
+@fontcolorwhite: #fff;
+@colorshalow:#ddd;
+@fontColor2:#666;
+@fontColor1:#333;
+@largeFont:24px;
+@commonFont:16px;
+@smallFont:12px;
+body,html,p,ul,li,input,label,h1,h2,h3,h4,h5,h6{
+	padding: 0;
+	margin:0;
+}
+
+
+@media screen and (max-width: 970px) {
+	html{
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 900px) {
+	html{
+		font-size: 10px;
+	}
+}
+ /*当浏览器的可视区域小于650px */
+@media screen and (max-width: 770px) {
+	html{
+		font-size: 14px;
+	}
+}
+
+.clearflow:after{
+	display: block;
+	clear: both;
+	content: '';
+	visibility: hidden;
+	height: 0;
+}
+.clearflow{
+	zoom:1;
+}
+
+// .wrap_page1{
+
+	.title{
+		border-bottom: 2px solid @backgroundColor;
+		span{
+			color: @colorgreen;
+			font-size: @commonFont;
+		}
+		input{
+			margin: 0.36rem;
+			padding: 0.36rem; 
+			-webkit-appearance: square-button;
+		}
+	}
+
+	// .records{
+	
+		.mask{
+			position: absolute;
+			top: 6.57rem;
+			left: 0.86rem;
+			width: 7.57rem;
+			height: 7.57rem;
+			// display: none;
+			background: rgba(0,0,0,0.1);
+
+			i{
+				display: inline-block;
+				margin: 2.86rem 2.86rem;
+				color: rgba(0,0,0,0.2);
+				border-radius: 0.36rem;
+				border: 0.07rem solid @colorgreen;
+			}
+		}
+		.teleplay{
+			position: relative;
+			padding: 1.07rem 0 1.79rem 0;
+			border-bottom: 0.07rem solid @colorshalow;
+
+			img{
+				float: left;
+				width: 14.29rem;
+				height: 8.57rem;
+			}
+			p{
+				position: relative;
+				left:20px;
+				padding:5px 10px;
+			}
+			p:nth-child(1){
+				color: @fontColor1;
+			}
+			p:nth-child(2){
+				color: @fontColor2;
+			}
+			.close{
+				position: absolute;
+				right: 10px;
+				top: 10px;
+			}	
+		}
+		.playtime{
+				display: inline-block;
+				margin: 10px;
+				padding:5px 10px;
+				background: orange;
+				border-radius: 5px;
+				color: @fontcolorwhite;
+		}
+		
+	// }
+// }

@@ -1,0 +1,214 @@
+@fontColor1: #333;
+@fontColor2:#666;
+@fontColor3:#999;
+
+@hoverFontColor:green;
+@visitedFontColor:#fff;
+@hoverbgColor: #5aa701;
+@backgroundColor:#f9f9f9;
+@largeIcon:32px;
+@largeFont:1.29rem;
+@commonFont:1.14rem;
+@smallFont:1.0rem;
+
+@bgyellow:#caa36e;
+@bggreen:#00c13b;
+
+@colorgreen:#5aa700;
+//common
+@media screen and (max-width: 1400px) {
+	html{
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	html{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 970px) {
+	html{
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 900px) {
+	html{
+		font-size: 10px;
+	}
+}
+/* 当浏览器的可视区域小于650px */
+@media screen and (max-width: 770px) {
+	html{
+		font-size: 14px;
+	}
+}
+.clearflow:after{
+	display: block;
+	clear: both;
+	content: '';
+	visibility: hidden;
+	height: 0;
+}
+.clearflow{
+	zoom:1;
+}
+
+body,html,div,p,ul,li,input,label,h1,h2,h3,h4,h5,h6{
+	padding: 0;
+	margin:0;
+}
+body{
+	color: @fontColor1;
+	font-family: '微软雅黑, Arial, sans-serif, 宋体';
+}
+
+
+.wrap{
+	width: 80%;
+	margin: 0 auto;
+}
+// 图像
+.person_head{
+	margin: 1.43rem 0;
+	border: 0.07rem solid @backgroundColor;
+
+	span.userName{
+		padding: 0.71rem;
+	}
+	//个人头像
+	.logo{
+		margin: 0 auto;
+		background: url(../img/logobg.png);
+		height: 9.64rem;
+		background-size: cover;
+		display: flex;
+		align-items: center;
+		div{
+
+
+			img{
+				width: 8.57rem;
+				height: 8.57rem;
+			}
+			.center-block{
+				margin-right: 1.43rem;
+			}
+			dl{
+				font-size: @commonFont;
+				color: @fontColor1;
+				text-align: left;
+				dt{
+
+				}
+				dd{
+					font-size: @smallFont;
+					padding: 0.14rem;
+				}
+			}
+		}
+	}
+
+	//vip开通
+	.vip{
+		text-align: center;
+		color: @fontColor3;
+		p{
+			// margin: 10px;
+		}
+		:nth-child(1){
+			i{
+				font-size: @largeIcon;
+			}
+		}
+		:nth-child(2){
+
+			span{
+				padding: 0.71rem 0.36rem;
+				border-radius: 0.71rem;
+				background: #c98b2b;
+				color:@visitedFontColor;
+				cursor: pointer;
+			}
+		}
+	}
+
+	//分割
+	span{
+		display: inline-block;
+		padding: 3.57rem 0.07rem;
+	}
+
+	//网球会员
+	.tennis{
+		.vip;
+		border-left: 0.07rem solid @fontColor2;
+		// em {
+		//     font-style: normal;
+		//     font-weight: normal;
+		//     text-align: center;
+		// }
+		color: @fontColor3;
+		:nth-child(2){
+			span{
+				background: @bggreen;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+
+.middle_wrap{
+	border: 0.14rem solid @backgroundColor;
+}
+// 功能模块
+.ftn{
+	background: @backgroundColor;
+	padding: 0;
+	min-height: 64.29rem;
+    height: auto!important;
+	border:1px solid @backgroundColor;
+	ul{
+		width: 100%;
+		text-align: center;
+		margin: 0;
+		padding: 0;	
+		li{
+			list-style: none;
+			// margin: 5px 10px;
+			padding: 5px 10px;
+			letter-spacing: 2px;
+			cursor: pointer;
+			font-size: @commonFont;	
+			a{
+				text-decoration: none;
+				color: @fontColor1;
+				&:hover{
+					color: @hoverFontColor;
+				}
+			}
+
+			&:visited{
+				background: @hoverbgColor;
+				color: @visitedFontColor;
+			}
+		}
+
+		i{
+			text-align: left;
+			padding: 4px 10px;
+			font-size: @commonFont;
+		}
+	}
+}
+
+//内容
+
+.tab_content{
+	.main_content{
+		margin-top: 1.43rem;
+		min-height: 42.86rem;
+	}
+}
+
+

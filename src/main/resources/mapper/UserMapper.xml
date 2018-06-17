@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+       Copyright 2009-2016 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+  <mapper namespace="com.dao.UserDao">
+  	<resultMap type="com.pojo.User" id="findUserResult">
+  		<id column="user_id" jdbcType="INTEGER" property="userId" />
+  		<result column="user_name" jdbcType="VARCHAR" property="userName" />
+  		<result column="Tel" jdbcType="INTEGER" property="tel" />
+  		<result column="email" jdbcType="INTEGER" property="email" />
+  		<result column="vipType" jdbcType="INTEGER" property="vipType" />
+  		<result column="portrait" jdbcType="VARCHAR" property="portrait" />
+  		<result column="qq" jdbcType="VARCHAR" property="qq" />
+  		<result column="living" jdbcType="VARCHAR" property="living" />
+  		<result column="sex" jdbcType="INTEGER" property="sex" />
+  		<result column="status" jdbcType="INTEGER" property="status" />
+  		
+  	</resultMap>
+  	
+	<select id="findUser" resultMap="findUserResult">
+		select user_id ,user_name,Tel,email,vipType,qq,sex,portrait ,living,status from user where user_id=#{id}
+	</select>
+	
+	<update id="updateUserInfo">
+		update user 
+		<set> 
+			<if test=" userName !=null and userName !=''  ">user_name=#{userName},</if> 
+			<if test=" tel !=null  ">Tel=#{tel},</if>
+			<if test=" email !=null and email !='' ">email=#{email},</if>
+			<if test=" living !=null and living !='' ">living=#{living},</if>
+			<if test=" qq !=null  ">qq=#{qq},</if>
+			<if test=" sex !=null  ">sex=#{sex} </if>
+		</set>
+		where user_id=#{id}
+	</update> 
+	
+ <update id="uploadportrait">
+		update user set portrait=#{portrait} where user_id=#{id}
+	</update>
+	
+	
+	<resultMap type="com.pojo.UserRecord" id="selectRecord">
+		<id column="user_id" jdbcType="INTEGER" property="userId" />
+		<result column="play_time" jdbcType="DATE" property="playTime"/>
+  		 <collection property="movies" resultMap="movie_content"></collection>
+	</resultMap>
+	<select id="selectHistory" resultMap="selectRecord">
+		select user_id ,play_time,movie.movie_id, movie_name,movie_description,movie_type from movie,record where movie.movie_id=record.movie_id and record.user_id=#{id}
+	</select><!--使用github改掉这个 不使用连接查询  -->
+	
+	<resultMap type="com.pojo.Movie" id="movie_content">
+		<id column="movie_id" jdbcType="INTEGER" property="movieId" />
+  		<result column="movie_name" jdbcType="VARCHAR" property="movieName" />
+  		<result column="movie_description" jdbcType="VARCHAR" property="movieDescription" />
+  		<result column="movie_type" jdbcType="VARCHAR" property="movieType" />
+	</resultMap><!-- 可以使用 select a as A 的方式 取消 resultMap 而使用 resultType -->
+	
+	<update id="buyVip">
+		update user set status=0 where user_id =#{userId}
+	</update>
+	
+	<resultMap type="com.pojo.Shopping" id="shoopingCart">
+		<id column="shopping_id" jdbcType="INTEGER" property="shoppingId"/>
+		<result column="user_id" jdbcType="INTEGER" property="userId" />
+		<result column="good_name" jdbcType="VARCHAR" property="goodName"/>
+  		<result column="good_price" jdbcType="DOUBLE" property="goodPrice"/>
+  		
+	</resultMap>
+	
+	<select id="querryShoppingCart" resultMap="shoopingCart">
+		select * from shopping 
+	</select>
+	<insert id="addGoods">
+		insert into  shopping(user_id,good_name,good_price) VALUES(#{userId},#{goodName},#{goodPrice})
+	</insert>
+	
+	<delete id="payForGoods">
+	delete from shopping where user_id=#{userId} and shopping_id=#{shoppingId}
+	</delete>
+</mapper>  

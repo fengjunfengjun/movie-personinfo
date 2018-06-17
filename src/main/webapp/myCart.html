@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>my购物车</title>
+	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_624437_i3113d2zl99newmi.css">
+	<link rel="stylesheet" type="text/css" href="css/myCart.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="progress">
+		
+		<div class="locationlogo">
+			<img src="https://www.qiyipic.com/common/fix/myCenter_images/logo1126.png">
+		</div>
+
+		<div class="buyerprogress">
+			
+		</div>
+	</div>
+	<!-- 我的购物车 -->
+	<div class="shopCart">
+		<h1 class="title">我的购物车</h1>
+		<!-- 位置开始 -->
+		<div class="location"></div>
+		<!-- 购物车商品 -->
+		<div class="cartWrapper">
+			<!-- 购物车头部 -->
+			<div class="cartHead">
+				<ul>
+					<li class="selectbox"><input type="checkBox" name="" >全选</li>
+					<li>商品信息</li>
+					<li>单价</li>
+					<li>数量</li>
+					<li>实付款</li>
+					<li>交易操作</li>
+				</ul>
+			</div>
+
+			<!-- 购物车中商品列表 -->
+			<div class="cart-goods-lists">
+				<table class="table">
+					<!-- 题目：由爱奇艺发货 -->
+					<tr class="col1">
+						<td class="webcheck selectbox" colspan="5">
+							<input type="checkBox" name="checkBoxItem">由爱奇艺发货
+						</td>
+						<!-- <td colspan="5">由爱奇艺发货</td> -->
+					</tr>
+
+				</table>
+			</div>
+			<!-- 购物车尾部 -->
+			<div class="cartfooter">
+				<div class="selectAll selectbox">
+					<input type="checkBox" name="selectAll" class="selectAll">
+					<label>全选</label>
+				</div>
+
+				<div class="addlike">加入收藏夹</div>
+
+				<div class="delete">删除</div>
+
+				<div class="deleteAll">清空购物车</div>
+
+				<div class="alreadyselect">已选商品		<span class="finalNum">0</span>	 件</div> <div class="totalmoney">合计（不含运费）：	<span class="finalPrice">0</span>	</div> 
+				<div class="compute"><input type="button" name="" value="结算"></div>
+			</div>
+		</div>
+	</div>
+	<!-- 感兴趣商品列表 -->
+	<h1 class="title">你可能感兴趣的而商品列表</h1>
+	<ul class="goods-lists">
+
+	</ul>
+
+	<!-- 尾部 -->
+
+	<!-- jquery库 -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- 发送请求库 -->
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	<script type="text/javascript" src="js/myCart.js"></script>
+</body>
+</html>

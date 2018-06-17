@@ -1,0 +1,323 @@
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1224px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 10px;
+  }
+}
+/* 当浏览器的可视区域小于650px 
+/*@media screen and (max-width: 770px) {
+	html{
+		font-size: 14px;
+	}
+}*/
+input,
+label,
+i,
+select,
+option,
+div,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+.clearflow:after {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  content: '';
+  height: 0;
+}
+.clearflow {
+  zoom: 1;
+}
+.active {
+  color: #fff;
+  background-color: #5aa701;
+}
+.active a {
+  color: #fff;
+}
+.shezhi_wrap .selected {
+  border-bottom: 0.14rem solid #699f00;
+  margin-bottom: -0.5rem;
+  color: #699f00;
+}
+.shezhi_wrap .title {
+  font-size: 1.0rem;
+  margin-bottom: -0.14rem;
+  border-bottom: 0.14rem solid #ddd;
+}
+.shezhi_wrap .title li {
+  list-style: none;
+  display: inline-block;
+  padding: 0.36rem;
+  flex-wrap: nowrap;
+}
+.shezhi_wrap .title li:hover {
+  color: green;
+  cursor: pointer;
+}
+.shezhi_wrap .content_details .tab_content_1 .info_messeges a {
+  float: left;
+}
+.shezhi_wrap .content_details .tab_content_1 .info_messeges a img {
+  width: 7.14rem;
+  height: 7.14rem;
+}
+.shezhi_wrap .content_details .tab_content_1 .info_messeges input[type="file"] {
+  width: 7.14rem;
+  height: 2px;
+  border: none;
+  outline: none;
+  text-align: center;
+  color: #5ba605;
+  display: block;
+  background: #f3f3f3;
+  opacity: 0;
+}
+.shezhi_wrap .content_details .tab_content_1 .info_messeges div.change {
+  margin-bottom: -30px;
+}
+.shezhi_wrap .content_details .tab_content_1 .info_messeges .text {
+  float: left;
+}
+.shezhi_wrap .content_details .tab_content_1 .info_messeges .text p {
+  padding: 0;
+  margin: 0.71rem 0.36rem;
+  font-size: 1rem;
+}
+.shezhi_wrap .content_details .tab_content_1 .bangding {
+  display: flex;
+  justify-content: space-around;
+}
+.shezhi_wrap .content_details .tab_content_1 .bangding div {
+  width: 50%;
+  margin: 0.21rem;
+  padding: 1.43rem 0.71rem;
+  justify-content: space-around;
+  align-items: center;
+  background: #f8fce0;
+}
+.shezhi_wrap .content_details .tab_content_1 .bangding div i {
+  display: block;
+  width: 4.29rem;
+  height: 7.14rem;
+  line-height: 7.14rem;
+  font-size: 3.0rem;
+  color: #59a801;
+  float: left;
+}
+.shezhi_wrap .content_details .tab_content_1 .bangding div .bingding_item {
+  width: 73%;
+  float: left;
+}
+.shezhi_wrap .content_details .tab_content_1 .bangding .text_type {
+  height: 1.71rem;
+  line-height: 1.71rem;
+  font-size: 1.0rem;
+  color: #333;
+}
+.shezhi_wrap .content_details .tab_content_1 .bangding #fixphone {
+  height: 1.71rem;
+  line-height: 1.71rem;
+  font-size: 1.0rem;
+  color: #333;
+  color: #699f00;
+  cursor: pointer;
+}
+.shezhi_wrap .content_details .tab_content_1 .bangding #fixemail {
+  height: 1.71rem;
+  line-height: 1.71rem;
+  font-size: 1.0rem;
+  color: #333;
+  color: #699f00;
+  cursor: pointer;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails {
+  position: relative;
+  border: 0.07rem solid #fafafa;
+  font-size: 1rem;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div {
+  position: relative;
+  width: 100%;
+  padding: 0.36rem;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div span {
+  display: inline-block;
+  color: #333;
+  padding: 0 1.43rem;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div label {
+  display: inline-block;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 1.86rem;
+  background: url(../img/select.png) top right no-repeat;
+  background-size: 1.57rem;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div input {
+  outline: none;
+  border: 0.07rem solid #999;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div span:nth-child(2) {
+  display: none;
+  width: 70%;
+  position: relative;
+  color: #999;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div span:nth-child(2) .save,
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div span:nth-child(2) .cancle {
+  float: right;
+  color: #699f00;
+  padding: 0 0.32rem;
+  cursor: pointer;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div span:nth-child(3) {
+  margin-left: 1.43rem;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div span:nth-child(4) {
+  float: right;
+  color: #699f00;
+  cursor: pointer;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails div:nth-child(odd) {
+  background: #fafafa;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails .birthday select {
+  font-size: 1.0rem;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails ul {
+  list-style: none;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails ul li:nth-child(odd) {
+  background: #fafafa;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails ul li:nth-child(odd) a {
+  color: #aaa;
+}
+.shezhi_wrap .content_details .tab_content_1 .msgdetails ul li:nth-child(odd) span {
+  text-align: right;
+}
+.shezhi_wrap .content_details .tab_content_2 {
+  display: none;
+}
+.shezhi_wrap .content_details .tab_content_3 {
+  display: none;
+}
+.shezhi_wrap .content_details .tab_content_3 .mod_con .authorize h2 {
+  margin-bottom: 2.79rem;
+  font-size: 1.0rem;
+  font-weight: 20;
+  color: #666;
+}
+.shezhi_wrap .content_details .tab_content_3 .mod_con .authorize h2 span {
+  color: #699f00;
+}
+.shezhi_wrap .content_details .tab_content_3 .mod_con .authorize .authorize_intro {
+  list-style: none;
+}
+.shezhi_wrap .content_details .tab_content_3 .mod_con .authorize .authorize_intro li {
+  height: 1.71rem;
+  line-height: 1.71rem;
+  font-size: 0.86rem;
+  color: #999;
+}
+.shezhi_wrap .content_details .tab_content_3 .mod_con .authorize .authorize_intro li i {
+  display: inline-block;
+  padding: 0.36rem;
+  border-radius: 0.36rem;
+  background: #699f00;
+  margin: 0 0.71rem;
+}
+.shezhi_wrap .content_details .tab_content_3 .mod_con .authorize .authorize_main {
+  margin-top: 4.29rem;
+}
+.shezhi_wrap .content_details .tab_content_3 .mod_con .authorize .authorize_main li {
+  list-style: none;
+  display: inline-block;
+}
+.shezhi_wrap .content_details .tab_content_3 .mod_con .authorize .authorize_main img {
+  width: 7.86rem;
+  height: 2.14rem;
+  border: 1px solid #f0f0f0;
+}
+.shezhi_wrap .content_details .tab_content_3 .mod_con .authorize .authorize_main a {
+  width: 7.71rem;
+  height: 1.86rem;
+  line-height: 1.86rem;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: 0.07rem solid #dfdfdf;
+  border-radius: 0.14rem;
+  font-size: 1.0rem;
+  color: #5da51c;
+  display: block;
+  margin: 0.64rem auto;
+}
+.shezhi_wrap .content_details .tab_content_4 {
+  display: none;
+}
+.shezhi_wrap .content_details .tab_content_4 .all_family_add {
+  display: flex;
+  justify-content: space-around;
+}
+.shezhi_wrap .content_details .tab_content_4 .family_add {
+  display: inline-block;
+  margin-top: 0.71rem;
+  width: 8.29rem;
+  justify-content: space-around;
+  align-items: center;
+  height: 16.14rem;
+  border: 0.07rem solid #f1f1f1;
+  background: #fff;
+  box-shadow: 0 0.07rem 0.36rem 0.07rem #f3f3f3;
+}
+.shezhi_wrap .content_details .tab_content_4 .family_add .add_top i {
+  width: 8.29rem;
+  height: 8.43rem;
+  display: inline-block;
+  background: url(../img/family.png) no-repeat center;
+}
+.shezhi_wrap .content_details .tab_content_4 .family_add .caf_main {
+  width: 8.29rem;
+}
+.shezhi_wrap .content_details .tab_content_4 .family_add .caf_main p {
+  text-align: center;
+}
+.shezhi_wrap .content_details .tab_content_4 .family_add .caf_main i {
+  color: #f2f2f2;
+  background: #699f00;
+  border-radius: 50%;
+}
+.shezhi_wrap .content_details .tab_content_4 .wrap_fenxi_gray i {
+  display: inline-block;
+  padding: 0 0.14rem;
+  height: 0.93rem;
+  margin-top: 0.29rem;
+  margin-right: 1.0rem;
+  background: #699f00;
+}
+.shezhi_wrap .content_details .tab_content_4 .wrap_fenxi_gray .desc_h {
+  margin-top: 1.43rem;
+  font-size: 1.0rem;
+  line-height: 1.57rem;
+  color: #333;
+}
+.shezhi_wrap .content_details .tab_content_4 .wrap_fenxi_gray .desc_p {
+  font-size: 0.86rem;
+  line-height: 2.0rem;
+  color: #666;
+}

@@ -1,0 +1,172 @@
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 970px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 10px;
+  }
+}
+/* 当浏览器的可视区域小于650px */
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 14px;
+  }
+}
+.clearflow:after {
+  display: block;
+  clear: both;
+  content: '';
+  visibility: hidden;
+  height: 0;
+}
+.clearflow {
+  zoom: 1;
+}
+body,
+html,
+div,
+p,
+ul,
+li,
+input,
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: #333;
+  font-family: '微软雅黑, Arial, sans-serif, 宋体';
+}
+.wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+.person_head {
+  margin: 1.43rem 0;
+  border: 0.07rem solid #f9f9f9;
+}
+.person_head span.userName {
+  padding: 0.71rem;
+}
+.person_head .logo {
+  margin: 0 auto;
+  background: url(../img/logobg.png);
+  height: 9.64rem;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.person_head .logo div img {
+  width: 8.57rem;
+  height: 8.57rem;
+}
+.person_head .logo div .center-block {
+  margin-right: 1.43rem;
+}
+.person_head .logo div dl {
+  font-size: 1.14rem;
+  color: #333;
+  text-align: left;
+}
+.person_head .logo div dl dd {
+  font-size: 1rem;
+  padding: 0.14rem;
+}
+.person_head .vip {
+  text-align: center;
+  color: #999;
+}
+.person_head .vip :nth-child(1) i {
+  font-size: 32px;
+}
+.person_head .vip :nth-child(2) span {
+  padding: 0.71rem 0.36rem;
+  border-radius: 0.71rem;
+  background: #c98b2b;
+  color: #fff;
+  cursor: pointer;
+}
+.person_head span {
+  display: inline-block;
+  padding: 3.57rem 0.07rem;
+}
+.person_head .tennis {
+  text-align: center;
+  border-left: 0.07rem solid #666;
+  color: #999;
+}
+.person_head .tennis :nth-child(1) i {
+  font-size: 32px;
+}
+.person_head .tennis :nth-child(2) span {
+  padding: 0.71rem 0.36rem;
+  border-radius: 0.71rem;
+  background: #c98b2b;
+  color: #fff;
+  cursor: pointer;
+}
+.person_head .tennis :nth-child(2) span {
+  background: #00c13b;
+  cursor: pointer;
+}
+.middle_wrap {
+  border: 0.14rem solid #f9f9f9;
+}
+.ftn {
+  background: #f9f9f9;
+  padding: 0;
+  min-height: 64.29rem;
+  height: auto!important;
+  border: 1px solid #f9f9f9;
+}
+.ftn ul {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.ftn ul li {
+  list-style: none;
+  padding: 5px 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-size: 1.14rem;
+}
+.ftn ul li a {
+  text-decoration: none;
+  color: #333;
+}
+.ftn ul li a:hover {
+  color: green;
+}
+.ftn ul li:visited {
+  background: #5aa701;
+  color: #fff;
+}
+.ftn ul i {
+  text-align: left;
+  padding: 4px 10px;
+  font-size: 1.14rem;
+}
+.tab_content .main_content {
+  margin-top: 1.43rem;
+  min-height: 42.86rem;
+}

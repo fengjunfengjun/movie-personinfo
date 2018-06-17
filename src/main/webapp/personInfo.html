@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>个人中心</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--iconfont -->
+	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_624437_zpir7nk43b84obt9.css">
+	<!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/personInfo.css">
+
+    <link rel="stylesheet" type="text/css" href="css/page1.css">
+    <link rel="stylesheet" type="text/css" href="css/page2.css">
+    <link rel="stylesheet" type="text/css" href="css/page6.css">
+	<!-- xs 12 sm 12 md 12 -->
+</head>
+<body>
+	<div class="wrap">
+		
+		<!-- 测试 -->
+
+		<!-- 个人中心-->
+		<div class="contanier row">
+			<!-- 头部 -->
+			<div class="row">
+				
+			</div>
+
+
+			<div class="row person_head">
+				<!-- logo -->
+				<div class="col-lg-3 col-md-4 col-xs-12 col-sm-4 logo row">
+					
+					<div class="col-md-5 col-sm-5 col-xs-6 col-sm-5">
+						<img src="img/portrait.png" alt="" class="img-circle img-responsive center-block personal_portrait">
+					</div>
+
+					<div class="col-md-7 col-sm-7 col-xs-6">
+						<dl>
+							<dt>
+								<span class="userName">zqian_</span>
+								<i class="iconfont icon-iconfonthuiyuan viplogo"></i>
+								<i class="iconfont icon-tubiaolunkuo-"></i>
+							</dt>
+							<dd><i class="iconfont icon-jifen"></i>我的积分</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="col-lg-1"></div>
+				<!-- vip -->
+				<div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 vip">
+					<p><i class="iconfont icon-iconfonthuiyuan viplogo"></i></p>
+					<p><span id="buyvip">立即开通</span></p>
+					<p>开通会员享丰富等级权利</p>
+				</div>
+
+				<!-- <span>|</span> -->
+				<!-- tennis -->
+				<div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 tennis">
+					<!-- <em></em> -->
+					<p><i class="iconfont icon-iostennisballoutline viptennislogo"></i></p>
+					<p><span id="buytennisvip">立即开通</span></p>
+					<p>开通网球会员享网球精彩赛事</p>
+				</div>
+			</div>
+
+
+			<div class="row middle_wrap">
+			<!--功能模块-->
+				<div class="col-lg-3 col-md-4 col-xs-12 col-sm-4 ftn">
+					<ul class="tab_list">
+						<li class="listbtn playrecords">
+							<i class="iconfont icon-lishi"></i>
+							<a>播放记录</a>
+						</li>
+						<li  class="listbtn subscription">
+							<i class="iconfont icon-dingyue"></i>
+							<a>我的订阅</a>
+						</li>
+
+						<li class="listbtn binge_watch">
+							<i class="iconfont icon-shoucang"></i>
+							<a>追剧收藏</a>
+						</li>
+						<li class="listbtn my_message">
+							<i class="iconfont icon-message"></i><a href="javascript:;" target="main_content">我的消息</a>
+						</li>
+						<li class="listbtn space_room">
+							<i class="iconont icon-person1"></i>
+							<a>我的空间</a>
+						</li>
+						<li class="listbtn personal_setting">
+							<i class="iconfont icon-shezhi"></i>
+							<a>个人设置</a>
+						</li>
+						<li class="listbtn">
+							<i class="iconfont icon-ziyuan"></i>
+							<a href="javascript:;">我的积分</a>
+						</li>
+
+						<hr>
+
+						<li class="listbtn">
+							<i class="iconfont icon-vip"></i>
+							<a href="javascript:;" >VIP会员</a>
+						</li>
+						<li class="listbtn">
+							<i class="iconfont icon-tubiaolunkuo-"></i>
+							<a href="javascript:;" >我的钱包</a>
+						</li>
+
+						<hr>
+
+						<li>
+							<i class="iconfont icon-iconfonthuiyuan"></i>
+							<a href="javascript:;">创作中心</a>
+						</li>
+						<li>
+							<i class="iconfont icon-shujia"></i>
+							<a href="javascript:;">我的书架</a>
+						</li>
+						<li>
+							<i class="iconfont icon-iconset0263"></i>
+							<a href="javascript:;">游戏中心</a>
+						</li>
+						<li id="personalCart"> 
+							<i class="iconfont icon-gouwuche"></i>
+							<a href="myCart.html">我的购物车</a>
+						</li>
+					</ul>
+				</div>
+				<!-- <div class="col-lg-1"></div> -->
+			<!-- 内容显示-->
+				<div class="col-lg-9 col-md-8 col-xs-12 col-sm-8 tab_content">
+					<div class="main_content" id="main_content" name="main_content">
+						
+					</div>
+				</div>
+			</div>
+
+
+			<!-- 尾部 -->
+			<div>
+				
+			</div>
+		</div>
+
+	</div>
+	
+
+	
+	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件 你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+   <script type="text/javascript" src="js/ajax_method.js"></script>
+   <script type="text/javascript" src="js/interact.js"></script>
+</body>
+</html>

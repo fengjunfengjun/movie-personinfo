@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<context:annotation-config/>
+
+	<!-- 自动扫描springMVC会将包下用了@Controller注解的类注册为Spring的controller -->
+	<context:component-scan base-package="com.controller"/>
+
+	<!-- 开启aop注解方式 （线上测试1：注解实现读写分离）-->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+
+	<!--设置默认配置方案 -->
+	<mvc:annotation-driven>
+		<!--开启json数据转化功能：测试通过 -->
+		<mvc:message-converters register-defaults="true">
+			<bean name="jackson2HttpMessageConverter"  class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+			<!-- 支持返回json(避免IE在ajax请求时，返回json出现下载 ) -->
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>application/json;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	 <!--配置文件上传组件：使用三方jar包：commons，不使用servlet自带的文件上传功能 -->
+ <bean name="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8" />
+		<!-- 内存里面不存储，全部写入磁盘 -->
+		<property name="maxInMemorySize" value="0" />
+		<!-- 每个文件最大10M左右 -->
+		<property name="maxUploadSizePerFile" value="10000000" />
+		<!-- 总计上传文件大小50M左右 -->
+		<property name="maxUploadSize" value="50000000" />
+	</bean>
+
+	<!--配置视图解析器：用于错误页面转发 -->
+	<bean  id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<!--前缀-->
+		<property name="prefix" value="/WEB-INF/" />
+		<!--后缀-->
+		<property name="suffix" value=".html" />
+	</bean>
+	<!-- <mvc:interceptors>
+		<mvc:interceptor>
+		<mvc:mapping path="/*"/>
+			<bean class="com.controller.Loginintercept">
+				
+			</bean>
+		</mvc:interceptor>
+	</mvc:interceptors> -->
+
+	<!--开启资源管理-->
+	<!--一般开启资源管理，不然无法访问静态资源-->
+	<mvc:default-servlet-handler/>
+
+    
+</beans>

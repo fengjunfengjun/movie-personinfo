@@ -1,0 +1,18 @@
+[INFO] [2018-04-24 20:57:50][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2018-04-24 20:57:50][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Apr 24 20:57:50 CST 2018]; root of context hierarchy
+[INFO] [2018-04-24 20:57:50][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO] [2018-04-24 20:57:51][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-04-24 20:57:51][com.mchange.v2.log.MLog]MLog clients using slf4j logging.
+[INFO] [2018-04-24 20:57:51][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+[INFO] [2018-04-24 20:57:51][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1062 ms
+[INFO] [2018-04-24 20:57:51][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2018-04-24 20:57:51][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Apr 24 20:57:51 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-04-24 20:57:51][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2018-04-24 20:57:52][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-04-24 20:57:52][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/findUser]}" onto public com.pojo.User com.controller.UserController.findUser() throws java.lang.Exception
+[INFO] [2018-04-24 20:57:52][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/updateUserInfo]}" onto public com.utils.MessageUtil com.controller.UserController.updateUserInfo(java.lang.String,int,java.lang.String,int,int,java.lang.String) throws java.lang.Exception
+[INFO] [2018-04-24 20:57:52][org.hibernate.validator.internal.util.Version]HV000001: Hibernate Validator 5.4.1.Final
+[INFO] [2018-04-24 20:57:52][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Apr 24 20:57:51 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-04-24 20:57:52][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Apr 24 20:57:51 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-04-24 20:57:53][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2018-04-24 20:57:53][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 1219 ms

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>个人设置</title>
+	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_624437_xvs71i45i2j4i.css">
+	<link rel="stylesheet" type="text/css" href="css/page6.css">
+</head>
+<body>
+	<div class="shezhi_wrap">
+		<div class="title">
+				<li class="selected">基本信息</li>
+				<li>消息设置</li>
+				<li>合作授权</li>
+				<li>家庭成员账号</li>
+		</div>
+
+
+		<div class="content_details">
+			<!-- 基本信息 -->
+			<div class="tab_content_1">
+				<div class="info_messeges clearflow">
+					<a href="jascript:;">
+						<img src="img/portrait.png" class="personal_portrait">
+						<input type="file" id="changehead" class="changehead"></input>
+						<div class="change">更换头像</div>
+					</a>
+					<div class="text">
+						<p>
+							<em>昵称</em>
+							<em class="userName">Zqian—qq06</em>
+						</p>
+						<p>
+							<em>会员类型</em>
+							<em class="vipType">您尚未开通任何会员套餐</em>
+						</p>
+						<p>
+							<em>UID</em>
+							<em class="userId">23222223232</em>
+						</p>
+						<p>
+							<em>资料完整度</em>
+							<em>完善资料</em>
+						</p>
+					</div> 
+				</div>
+
+				<div class="col_1 bangding">
+					<div class="phonebinding clearflow">
+						<i class="iconfont icon-shoujiyanzheng"></i>
+						<div class="bingding_item">
+
+							<p class="text_type">手机已验证</p>
+							<p class="text_type">
+								<span class="tel"></span>
+								<span id="fixphone">修改手机号</span>
+							</p>
+							<p class="text_type">您可以享受手机相关的登录，安全及提醒服务</p>
+						</div>
+					</div>
+					<div class="findpsd clearflow">
+						<i class="iconfont icon-xiugaimima1"></i>
+						<div class="bingding_item">
+							<p class="text_type">修改密码</p>
+							<p class="text_type">可以通过邮箱，手机修改密码</p>
+						</div>
+					</div>
+				</div>
+				<div class="col_2 bangding clearflow">
+					<div class="emailbinding">
+						<i class="iconfont icon-youxiangbangding"></i>
+						<div class="bingding_item">
+							<p class="text_type">邮箱已验证</p>
+							<p class="text_type">
+								<span class="email"></span>
+								<span id="fixemail">修改邮箱</span>
+							</p>
+							<p class="text_type">绑定后，可以使用邮箱登录及保证账号安全</p>
+						</div>
+					</div> 
+					<div class="fixpsd clearflow">
+						<i class="iconfont icon-key"></i>
+						<div class="bingding_item">
+							<p class="text_type">找回密码</p>
+							<p class="text_type">可以通过邮箱，手机找回密码</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="msgdetails">
+					<div class="sex">
+						<span>性别</span>
+						<span class="edit_line">
+							<span class="edit_option sex">
+								<!-- <label><i class=""></i>男</label>
+								<label><i class=""></i>女</label> -->
+								<input type="text" id = "sex"name="sex" value="男">
+							</span>
+							<label class="cancle">取消</label>
+							<label class="save">保存</label>
+						</span>
+						<span class="sexmsg">未设置</span>
+						<span class="msgshezhi">设置</span>
+					</div>
+					<div class="bloodtype">
+						<span>血型</span>
+						<span class="edit_line">
+							<span class="edit_option">
+								<select>
+									<option>请选择</option>
+									<option>A</option>
+									<option>B</option>
+									<option>C</option>
+									<option>AB</option>
+									<option>O</option>
+									<option>其他</option>
+								</select>
+							</span>
+							<label class="cancle">取消</label>
+							<label class="save">保存</label>
+						</span>
+						<span>未设置</span>
+						<span class="msgshezhi">设置</span>
+					</div>
+					<div class="birthday">
+						<span>生日</span>
+						<span class="edit_line">
+							<span class="edit_option">
+								<select>
+									<option>请选择</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+								<label>月</label>
+								<select>
+									<option>请选择</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+								<label>日</label>
+							</span>
+							<label class="cancle">取消</label>
+							<label class="save">保存</label>				
+						</span>
+						<span>未设置</span>
+						<span class="msgshezhi">设置</span>
+					</div>
+					<div class="livingplace">
+						<span>居住</span>
+						<span class="edit_line">
+							<span class="edit_option">
+								
+								<input type="text" id="living" name="living">
+							</span>
+							<label class="cancle">取消</label>
+							<label class="save">保存</label>							
+						</span>
+						<span class="livingmsg">未设置</span>
+						<span class="msgshezhi">设置</span>
+					</div>
+					<div class="qq">
+						<span>Q Q</span>
+						<span class="edit_line">
+							<span class="edit_option">
+								<input type="text" id = "qqnum" name="qqnum" value="">
+							</span>
+							<label class="cancle">取消</label>
+							<label class="save">保存</label>	
+						</span>
+
+						<span class="qqmsg">未设置</span>
+						<span class="msgshezhi" id="msgshezhi">设置</span>
+					</div>
+	
+
+				</div>
+			</div>
+			<!-- 消息设置 -->
+			<div class="tab_content_2">
+				<div class="nodata state">
+					<i class="iconfont icon-icon-test"></i>
+					<em>Ta还未发过任何动态</em>
+				</div>
+			</div>
+			<!-- 合作授权 -->
+			<div class="tab_content_3">
+				<!-- 开始 -->
+				<div class="mod_con">
+			        <div class="authorize">
+			        	<h2 class="mainColor">为您的当前帐号：
+			        		<span class="green userName" id="authUserName">仰望_qq4601</span>进行如下平台的合作授权，授权后您使用当前帐号在爱奇艺/PPS平台登录时您可以：
+			       		 </h2>
+				        <ul class="authorize_intro"> 
+				            <li>
+				            	<i class="circle"></i>
+				            	将喜欢的内容同步分享到合作平台，和朋友们一起分享好视频
+				            </li> 
+				            <li>
+				            	<i class="circle"></i>与合作平台的好友在爱奇艺/PPS中互动
+				            </li> 
+				            <li>
+				            	<i class="circle"></i>在指定平台上获得您的追剧，订阅内容的提醒
+				            </li> 
+				        </ul>
+				        <ul class="authorize_main">
+					          <li>
+					            <img src="http://www.qiyipic.com/common/fix/personalCenter_new_images/weibo.png" alt="">
+					            <div>
+					              <a class="accredit-btn" href="">授权</a>
+					            </div>
+					          </li>
+					           <li>
+					            <img src="http://www.qiyipic.com/common/fix/personalCenter_new_images/authorize_qzone.jpg" alt="">
+					            <div>
+					              <a class="accredit-btn" href="">授权</a>
+					            </div>
+					          </li>
+					           <li>
+					            <img src="http://www.qiyipic.com/common/fix/personalCenter_new_images/zhifubao.jpg" alt="">
+					            <div>
+					              <a class="accredit-btn" href="">授权</a>
+					            </div>
+					          </li>
+					           <li>
+					            <img src="http://www.qiyipic.com/common/fix/personalCenter_new_images/authorize_baidu.jpg" alt="">
+					            <div>
+					              <a class="accredit-btn" href="">授权</a>
+					            </div>
+					          </li>  
+				        </ul>
+			      </div>
+			  </div>
+				<!-- 结束 -->
+			</div>
+			<div class="tab_content_4 user_wraper_family">
+				<div class="all_family_add">
+					<div class="family_add">
+			            <div class="add_top">
+			                <i class="top_pic"></i>
+			            </div>
+			            <div class="caf_main">
+			                <p class="family_editbtn">
+			                    <i class="iconfont icon-add1"></i>添加家庭成员
+			                </p>
+
+			            </div>
+
+		      		 </div>
+		      		 <div class="family_add">
+			            <div class="add_top">
+			                <i class="top_pic"></i>
+			            </div>
+			            <div class="caf_main">
+			                <p class="family_editbtn">
+			                    <i class="iconfont icon-add1"></i>添加家庭成员
+			                </p>
+
+			            </div>
+
+		      		 </div>
+
+		      		 <div class="family_add">
+			            <div class="add_top">
+			                <i class="top_pic"></i>
+			            </div>
+			            <div class="caf_main">
+			                <p class="family_editbtn">
+			                    <i class="iconfont icon-add1"></i>添加家庭成员
+			                </p>
+
+			            </div>
+
+		      		 </div>
+
+		      		  <div class="family_add">
+			            <div class="add_top">
+			                <i class="top_pic"></i>
+			            </div>
+			            <div class="caf_main">
+			                <p class="family_editbtn">
+			                    <i class="iconfont icon-add1"></i>添加家庭成员
+			                </p>
+
+			            </div>
+
+		      		 </div>
+	      		</div>
+	      		 <!-- 添加成员结束 -->
+
+	      		 <div class="wrap_fenxi_gray">
+                    <div class="profile_desc">
+                        <h3 class="desc_h">
+                            <i class="lfLine_title"></i>什么是家庭成员？
+                        </h3>
+                        <p class="desc_p">家庭成员帐号是爱奇艺提供给广大爱奇艺VIP用户的家庭帐号服务，爱奇艺为每个家庭成员提供独立的信息存储以及精准推荐服务，例如播放记录、收藏等。每个家庭成员与主账号享有相同的权益。</p>
+                        <h3 class="desc_h">
+                            <i class="lfLine_title"></i>家庭成员常见问题：
+                        </h3>
+                        <div class="desc_p">
+                            <p>1.在同一爱奇艺主账号下的所有家庭成员只允许同时最多在两个设备上播放，详见
+                                <a href="http://vip.iqiyi.com/membershipagreement.html" target="_blank" style="color:#699f00;">爱奇艺会员协议</a>
+                            </p>
+                            <p>2.家庭成员可以共享主账号的VIP会员权益，主账号会员过期后，家庭成员会员权益也会过期。</p>
+                            <p>3.家庭成员无法脱离主帐号独立存在，需要通过主账号进行登录。</p>
+                            <p>4.一个爱奇艺帐号最多只能创建4个家庭成员，删除家庭成员时会将该家庭成员的信息一起删除，包含播放记录，收藏等信息。</p>
+                            <p>5.一个爱奇艺帐号下所有的家庭成员，在24小时内仅允许修改1次，修改内容包括家庭成员的昵称、头像、生日、性别等。</p>
+                        </div>
+                    </div>
+                </div>
+
+			</div>
+
+		</div>
+	</div>
+	 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>

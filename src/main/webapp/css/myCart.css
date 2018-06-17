@@ -1,0 +1,207 @@
+body,
+html,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+input,
+div,
+table,
+tr,
+td,
+i,
+sub,
+sup {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 70%;
+  margin: 0 auto;
+  font-family: "微软雅黑, Tahoma, Helvetica, Arial, 宋体, sans-serif";
+}
+@media screen and (min-width: 1420px) {
+  body {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 970px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 10px;
+  }
+}
+/* 当浏览器的可视区域小于650px */
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 8px;
+  }
+}
+.shopCart .cartWrapper {
+  color: #777;
+}
+.shopCart .cartWrapper td,
+.shopCart .cartWrapper li {
+  position: relative;
+}
+.shopCart .cartWrapper .selectbox {
+  padding: 0 0.36rem;
+}
+.shopCart .cartWrapper .cartHead {
+  padding-top: 1.07rem;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+}
+.shopCart .cartWrapper .cartHead ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.shopCart .cartWrapper .cartHead ul li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+}
+.shopCart .cartWrapper .cart-goods-lists {
+  width: 100%;
+}
+.shopCart .cartWrapper .cart-goods-lists .table {
+  width: 100%;
+}
+.shopCart .cartWrapper .cart-goods-lists tr {
+  position: relative;
+}
+.shopCart .cartWrapper .cart-goods-lists td {
+  display: inline-block;
+}
+.shopCart .cartWrapper .cart-goods-lists .col1 {
+  display: flex;
+  background: #f7f7f7;
+  justify-content: space-between;
+}
+.shopCart .cartWrapper .cart-goods-lists .col1 td {
+  padding: 0.71rem 0;
+  width: 7.14rem;
+}
+.shopCart .cartWrapper .cart-goods-lists .col2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shopCart .cartWrapper .cart-goods-lists .col2 td:nth-child(1) {
+  width: 3.71rem;
+  margin: 1.79rem 0;
+  padding-left: 0;
+}
+.shopCart .cartWrapper .cart-goods-lists .col2 td:nth-child(3) {
+  position: relative;
+}
+.shopCart .cartWrapper .cart-goods-lists .col2 .num-change {
+  position: relative;
+  top: 0.71rem;
+}
+.shopCart .cartWrapper .cart-goods-lists .col2 .num-change:hover {
+  cursor: pointer;
+}
+.shopCart .cartWrapper .cart-goods-lists .col2 .num-change sup {
+  position: relative;
+  bottom: 0.86rem;
+}
+.shopCart .cartWrapper .cart-goods-lists .col2 .num-change sub {
+  position: relative;
+  left: -20px;
+}
+.shopCart .cartWrapper .cart-goods-lists .col2 .item-num input {
+  display: inline-block;
+  width: 20px;
+  padding: 0.21rem;
+  text-align: center;
+}
+.shopCart .cartWrapper .cartfooter {
+  margin-bottom: 20px;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+}
+.shopCart .cartWrapper .cartfooter div {
+  cursor: pointer;
+}
+.shopCart .cartWrapper .cartfooter div:hover {
+  color: red;
+}
+.shopCart .cartWrapper .cartfooter div.compute input {
+  background: red;
+  color: #fff;
+  padding: 0.36rem 0.71rem;
+  border-radius: 0.36rem;
+  outline: none;
+  border: none;
+}
+.shopCart .cartWrapper .cartfooter div.compute input:hover {
+  cursor: pointer;
+}
+h1.title {
+  display: inline-block;
+  margin-bottom: 1.43rem;
+  padding: 0.71rem 0;
+  color: #3c3c3c;
+  font-size: 1.29rem;
+  border-bottom: 0.14rem solid red;
+}
+ul.goods-lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul.goods-lists li.goods-item {
+  width: 10.0rem;
+  list-style: none;
+  padding: 1.07rem;
+  margin: 0.71rem 0.57rem;
+  border: 0.07rem solid red;
+}
+ul.goods-lists li.goods-item div.item-wrapper a {
+  display: inline-block;
+}
+ul.goods-lists li.goods-item div.item-wrapper a img {
+  width: 8.57rem;
+  height: 8.57rem;
+  transition: all 0.8s;
+}
+ul.goods-lists li.goods-item div.item-wrapper a img:hover {
+  transform: scale(1.2);
+  overflow: hidden;
+}
+ul.goods-lists li.goods-item div.item-wrapper .goods-title {
+  padding: 1.07rem 0;
+  font-size: 0.86rem;
+}
+ul.goods-lists li.goods-item div.item-wrapper .goods-info {
+  font-size: 0.86rem;
+}
+ul.goods-lists li.goods-item div.item-wrapper .goods-info span.goods-price {
+  display: inline-block;
+  padding-right: 0.71rem;
+}
+ul.goods-lists li.goods-item div.item-wrapper .goods-info span.goods-price sub {
+  color: red;
+}
