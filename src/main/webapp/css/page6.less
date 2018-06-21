@@ -117,6 +117,14 @@ input,label,i,select,option,div,ul,li{
 						width: 7.14rem;
 						height: 7.14rem;
 					}
+
+					.change{
+						text-align: center;
+
+						&:hover{
+							cursor: pointer;
+						}
+					}
 				}
 				// .changehead{
 
@@ -191,16 +199,25 @@ input,label,i,select,option,div,ul,li{
 				    font-size: 1.0rem;
 				    color: #333;
 				}
-				#fixphone{
+				.phone{
 					.text_type;
 					color: @colorgreen;		
 					cursor: pointer;			
 				}
-				#fixemail{
+				#fixphone,#saveTel,#fixemail,#saveEmail{
 					.text_type;
 					color: @colorgreen;
 					cursor: pointer;
 				}
+				#saveEmail,#saveTel{
+					display: none;
+				}
+				.mail{
+					.text_type;
+					color: @colorgreen;
+					cursor: pointer;
+				}
+
 			}
 			.msgdetails{
 				position: relative;

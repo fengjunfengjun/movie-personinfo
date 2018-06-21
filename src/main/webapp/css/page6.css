@@ -74,6 +74,12 @@ li {
   width: 7.14rem;
   height: 7.14rem;
 }
+.shezhi_wrap .content_details .tab_content_1 .info_messeges a .change {
+  text-align: center;
+}
+.shezhi_wrap .content_details .tab_content_1 .info_messeges a .change:hover {
+  cursor: pointer;
+}
 .shezhi_wrap .content_details .tab_content_1 .info_messeges input[type="file"] {
   width: 7.14rem;
   height: 2px;
@@ -127,7 +133,7 @@ li {
   font-size: 1.0rem;
   color: #333;
 }
-.shezhi_wrap .content_details .tab_content_1 .bangding #fixphone {
+.shezhi_wrap .content_details .tab_content_1 .bangding .phone {
   height: 1.71rem;
   line-height: 1.71rem;
   font-size: 1.0rem;
@@ -135,7 +141,22 @@ li {
   color: #699f00;
   cursor: pointer;
 }
-.shezhi_wrap .content_details .tab_content_1 .bangding #fixemail {
+.shezhi_wrap .content_details .tab_content_1 .bangding #fixphone,
+.shezhi_wrap .content_details .tab_content_1 .bangding #saveTel,
+.shezhi_wrap .content_details .tab_content_1 .bangding #fixemail,
+.shezhi_wrap .content_details .tab_content_1 .bangding #saveEmail {
+  height: 1.71rem;
+  line-height: 1.71rem;
+  font-size: 1.0rem;
+  color: #333;
+  color: #699f00;
+  cursor: pointer;
+}
+.shezhi_wrap .content_details .tab_content_1 .bangding #saveEmail,
+.shezhi_wrap .content_details .tab_content_1 .bangding #saveTel {
+  display: none;
+}
+.shezhi_wrap .content_details .tab_content_1 .bangding .mail {
   height: 1.71rem;
   line-height: 1.71rem;
   font-size: 1.0rem;
