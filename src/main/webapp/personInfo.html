@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--iconfont -->
-	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_624437_zpir7nk43b84obt9.css">
+	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_624437_rehf4ttxo4j.css">
 	<!-- Bootstrap -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- css -->
@@ -17,6 +17,32 @@
 	<!-- xs 12 sm 12 md 12 -->
 </head>
 <body>
+
+	<header>
+		<nav>
+			<a href="javascript:;" id="login">登录</a>
+			<a href="javascript:;" id="register">注册</a>
+		</nav>
+	</header>
+
+	<!-- 登录框 -->
+	<div id="loginBox">
+		<form name="loginBox">
+			<p><label for="account">用户名</label></p>
+
+			<p><input type="text" id="account"><span class="infoAccount"> </span></p>
+
+
+			<p><label for="psd">密码</label></p>
+
+			<p><input type="text" id="psd"><span class="infoPsd"></span></p>
+
+			<p><input type="button" id="loginBtn" value="登录"></p>
+		</form>
+		<div id="close">
+			<i class="iconfont icon-close"></i>
+		</div>
+	</div>
 	<div class="wrap">
 		
 		<!-- 测试 -->
@@ -161,7 +187,6 @@
 
    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-   <script type="text/javascript" src="js/ajax_method.js"></script>
    <script type="text/javascript" src="js/interact.js"></script>
 </body>
 </html>

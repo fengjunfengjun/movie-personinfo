@@ -31,7 +31,16 @@ window.onload= function(){
 		});
 	})();
 
+	// //登录注册
+	// var login = document.getElementById('login');
+	// var register = document.getElementById('register');
+	// login.addEventListener('click',loginDialog,false);
+	// register.addEventListener('click',registerDialog,false);
 
+	// //登录框
+	// function loginDialog(){
+
+	// }
 	//开通会员元素
 	var buyvip = document.getElementById('buyvip');
 	var buytennisvip  =document.getElementById("buytennisvip");
@@ -62,7 +71,7 @@ window.onload= function(){
 	space_room[0].addEventListener('click',space_roomrap,false);
 	personal_setting[0].addEventListener('click',getpersonalmsgrap,false);
 
-	personalCart.addEventListener('click',myCartrap,false);
+
 	//选中状态控制
 	// function setactive(){
 	// 	Object.keys(listftnbtns).forEach(function(item,index,array){
@@ -394,26 +403,11 @@ window.onload= function(){
 		temp = '';
 
 		(function change(){
-			// var url = 'personalmsg';
-			// var url0 = document.URL;
-			// var num = url0.indexOf("?");
-			// var oldurl;
-			// if(num == -1){
-			// 	oldurl = url0;
-			// }else{
-			// 	oldurl = url0.slice(0,num);
-			// }
-
-			// var newurl = oldurl + '?' +url;
-			// history.pushState(null,null,newurl);
-			// var ajaxurl = url + '.html';
-
 		    $.ajax({  
 			    type: "get",  
 			    url: 'personalmsg.html',  
 			    success: function(html) {  
 			        main_content.innerHTML = html;  
-			        console.log(html);
 			        tabChange();
 			    }  
 		    }); 
@@ -421,7 +415,8 @@ window.onload= function(){
 
 		axios({
 				method:'get',
-				url:'findUser.do'
+				// url:'findUser.do'
+				url:'http://rap2api.taobao.org/app/mock/data/70829'
 			})
 		.then(function(response){
 			//个人信息显示接口
@@ -441,7 +436,7 @@ window.onload= function(){
 		
 			var usersmsg = response.data.data;
 			console.log(response.data);
-			// if(usersmsg.userId != ''){
+
 				Object.keys(userNames).forEach(function(item,index,array){
 					userNames[index].innerHTML = usersmsg.userName;
 				});
@@ -483,12 +478,11 @@ window.onload= function(){
 					vipType[index].innerHTML = `<i class="iconfont icon-iostennisballoutline">网球会员</i>`;
 					}
 				});
-			// }//if
 
 
 			//头像更改
 			if(changehead){
-				alert('exit');
+
 				changehead.addEventListener('change',changeheadrap,false);
 			}else{
 
@@ -497,6 +491,12 @@ window.onload= function(){
 
 		//调用信息修改函数
 		personal_correct_msg();
+
+		//修改邮箱
+		fixemail();
+
+		//修改手机号
+		fixphone();
 		})
 	}
 
@@ -530,6 +530,7 @@ window.onload= function(){
 		};
 		var msgdetails = document.getElementsByClassName('msgdetails');
 		var save = document.getElementsByClassName('save');
+		var cancle = document.getElementsByClassName("cancle");
 
 		// var cancle = document.getElementsByClassName('cancle');
 		var msgshezhi = document.getElementsByClassName('msgshezhi');
@@ -542,6 +543,9 @@ window.onload= function(){
 
 		Object.keys(save).forEach(function(index){
 			save[index].addEventListener('click',savemsg,false);
+		})
+		Object.keys(cancle).forEach(function(index){
+			cancle[index].addEventListener('click',savemsg,false);
 		})
 		function correctmsg(){
 			
@@ -587,31 +591,10 @@ window.onload= function(){
 					living:newliving,
 					tel:'',
 					email:''
-				},
-				//data:{
-//					data:{
-//						userName:newuserName,
-//						sex:newsexcode,
-//						qq:newuserqq,
-//						living:newliving,
-//						tel:'',
-//						email:''
-//					},
-					
-				
-				
+				},					
 			})
-			/*.then(function(response){
-				console.log(response);
-				console.log(response.data);
-				var msg = response.data.msg;
-				alert(msg);
-			});*/
-			savepersonalmsg();
 
-			firstshow.remove(super_par.children[1]);
-			correctshow.remove(super_par.children[2]);
-			correctshow.remove(super_par.children[3]);
+			savepersonalmsg();
 
 		}
 
@@ -634,11 +617,81 @@ window.onload= function(){
 			correctshow.forEach(function(item,index,array){
 				item.style.display = 'inline-block';
 			})
-		
+
+			 correctshow = [];
+			 firstshow = [];
 		}
 	}
 
+	//修改手机号
+	function fixphone(){
+		var fixphone = document.getElementById('fixphone');
+		var saveTel = document.getElementById('saveTel')
+		var tel = document.getElementsByClassName('tel');
 
+		fixphone.addEventListener('click',function(){
+			var normalvalue = tel[0].innerHTML;
+			var telInput = `
+			<input type="text" name="" value="${normalvalue}" id="telInput">
+		`;
+			tel[0].innerHTML = telInput;
+			fixphone.style.display = 'none';
+			saveTel.style.display = 'inline-block';	
+		},false);
+
+		saveTel.addEventListener('click',function(){
+			var newTelValue = document.getElementById('telInput').value;
+			tel[0].innerHTML = newTelValue;
+			fixphone.style.display = 'inline-block';
+			saveTel.style.display = 'none';
+			$.ajax({
+				method:'post',
+				url:'updateUserInfo.do',
+				data:{
+					userName:'',
+					sex:'',
+					qq:'',
+					living:'',
+					tel:newTelValue,
+					email:''
+				}
+			})
+		},false)
+	}
+	//修改邮箱
+	function fixemail(){
+		var fixemail = document.getElementById('fixemail');
+		var saveEmail = document.getElementById('saveEmail');
+		var email = document.getElementsByClassName('email');
+
+		fixemail.addEventListener('click',function(){
+			var normalvalue = email[0].innerHTML;
+			var emailinput = `
+			<input type="text" name="" value="${normalvalue}" id="emailinput">
+		`;
+			email[0].innerHTML = emailinput;
+			fixemail.style.display = 'none';
+			saveEmail.style.display = 'inline-block';	
+		},false);
+		saveEmail.addEventListener('click',function(){
+			var newEmailValue = document.getElementById('emailinput').value;
+			email[0].innerHTML = newEmailValue;
+			fixemail.style.display = 'inline-block';
+			saveEmail.style.display = 'none';
+			$.ajax({
+				method:'post',
+				url:'updateUserInfo.do',
+				data:{
+					userName:'',
+					sex:'',
+					qq:'',
+					living:'',
+					tel:'',
+					email:newEmailValue
+				}
+			})
+		},false)
+	}
 	//选项卡切换
 	function tabChange(){
 		var title_tabs = document.getElementsByClassName('title');
@@ -707,35 +760,62 @@ window.onload= function(){
 
 	}
 
+	//登录注册
+	$('#login').bind('click',function(){
+		$("#loginBox").show();
+		$('#wrapper').css('backgroundColor','#fcfcfc');
+	})
+	 //账号验证
+	 function zhanghao_yz() {
+	     var reg = /^[A-Za-z]\w+$/; //正则表达式 必须以字母开头的账号
+	     if ($("#account").val().search(reg) == -1) {
+	         $(".infoAccount").html("账号字母开头的 可以包含数字字母下划线");
+	         /*alert("密码只能是6-9位数字");*/
+	         return false;
+	     } else {
+	         $(".infoAccount").html("账号验证成功");
+	         /*  alert("验证成功");*/
+	         return true;
+	     }
+	     return true;
+	 }
+	 $('#account').blur(zhanghao_yz);
+	 function password_check() {
+	     var reg = /^\d{6,9}$/; //正则表达式 必须以数字开头和结尾  6-9位
+	     if ($("#psd").val().search(reg) == -1) {
+	         $(".infoPsd").html("密码只能是6-9位数字");
+	         /*alert("密码只能是6-9位数字");*/
+	         return false;
+	     } else {
+	         $(".infoPsd").html("密码验证成功");
+	         /*  alert("验证成功");*/
+	         return true;
+	     }
+	     return true;
+	 }
+ 	 $('#psd').blur(password_check);
 
+ 	 //关闭
+ 	 $('#close').bind('click',function(){
+ 	 	$("#loginBox").hide();
+ 	 })
 
-	//购物车回调函数
-	function myCartrap(){
+ 	 //登录验证,用户登录接口
+ 	 $('#loginBtn').bind('click',function(){
+ 	 	var userName = $('#account').val();
+ 	 	var psd = $('#psd').val();
+ 	 	
+ 	 	$.ajax({
+ 	 		method:'post',
+ 	 		url:'',
+ 	 		data:{
+ 	 			userName:userName,
+ 	 			psd:psd,
+ 	 		}
+ 	 		success:function(){
+ 	 			
+ 	 		}
+ 	 	})
 
-		(function change(){
-			var url = 'page6';
-			var url0 = document.URL;
-			var num = url0.indexOf("?");
-			var oldurl;
-			if(num == -1){
-				oldurl = url0;
-			}else{
-				oldurl = url0.slice(0,num);
-			}
-
-			var newurl = oldurl + '?' +url;
-			history.pushState(null,null,newurl);
-			var ajaxurl = url + '.html';
-
-		    $.ajax({  
-			    type: "get",  
-			    url: 'myCart.html',  
-			    success: function(html) {  
-			        main_content.innerHTML = html;  
-			        // tabChange();
-			    }  
-		    }); 
-		})();
-	}
-	
+ 	 })
 };
