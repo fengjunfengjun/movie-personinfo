@@ -8,21 +8,13 @@ public class User {
 	private String userName;
 	private String email;
 	private String portrait;
-	private int tel;
+	private Integer tel;
 	private String living;
-	private  int sex;
-	private int qq;
-	private int vipType;
-	
-	private int status;
-	
-	
-	public int getStatus() {
-		return status;
-	}
-	public void setStatus(int status) {
-		this.status = status;
-	}
+	private  Integer sex;
+	private Integer qq;
+	private Integer vipType;
+	private String userPassword;
+	private Integer status;
 	public int getUserId() {
 		return userId;
 	}
@@ -47,10 +39,10 @@ public class User {
 	public void setPortrait(String portrait) {
 		this.portrait = portrait;
 	}
-	public int getTel() {
+	public Integer getTel() {
 		return tel;
 	}
-	public void setTel(int tel) {
+	public void setTel(Integer tel) {
 		this.tel = tel;
 	}
 	public String getLiving() {
@@ -59,23 +51,35 @@ public class User {
 	public void setLiving(String living) {
 		this.living = living;
 	}
-	public int getSex() {
+	public Integer getSex() {
 		return sex;
 	}
-	public void setSex(int sex) {
+	public void setSex(Integer sex) {
 		this.sex = sex;
 	}
-	public int getQq() {
+	public Integer getQq() {
 		return qq;
 	}
-	public void setQq(int qq) {
+	public void setQq(Integer qq) {
 		this.qq = qq;
 	}
-	public int getVipType() {
+	public Integer getVipType() {
 		return vipType;
 	}
-	public void setVipType(int vipType) {
+	public void setVipType(Integer vipType) {
 		this.vipType = vipType;
+	}
+	public String getUserPassword() {
+		return userPassword;
+	}
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 	
 	

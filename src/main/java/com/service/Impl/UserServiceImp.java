@@ -20,15 +20,15 @@ public class UserServiceImp implements UserService{
 	@Autowired
 	private UserDao userDao;
 
-	public User queryUser(String id) throws Exception {
-
-         User user=userDao.findUser(Integer.parseInt(id));
+	public User queryUser(Integer id) throws Exception {
+		
+         User user=userDao.findUser(id);
 		return user;
 	}
 
 	
-	public int updateUserInfo(Integer id,String userName, Integer  sex, String living, Integer  qq, Integer tel, String email) throws Exception {
-		int n=userDao.updateUserInfo(id, userName, sex, living, email, qq, tel);
+	public int updateUserInfo(User user) throws Exception {
+		int n=userDao.updateUserInfo(user);
 		
 		return n;
 	}
@@ -39,7 +39,6 @@ public class UserServiceImp implements UserService{
 	public int uploadportrait(Integer id,String portrait) throws Exception {
 		int n=userDao.uploadportrait(id, portrait);
 		return n;
-		
 		
 	}
 
@@ -80,7 +79,7 @@ public class UserServiceImp implements UserService{
 	}
 
 
-	@Override
+/*	@Override
 	public User getUserByToken(HttpServletRequest request) {
 		Cookie[] cookies=request.getCookies();
 		String token=null;
@@ -103,8 +102,30 @@ public class UserServiceImp implements UserService{
 			User user=JsonUtils.jsonToPojo(json, User.class);
 	
 		return user;
+	}*/
+
+
+	@Override
+	public int userRegister(User user) throws Exception {
+		String userName=null;
+		userName=userDao.userNameCheck(user.getUserName());
+		
+		if(userName!=null) {
+			return -1;
+		}
+		int n=userDao.userRegister(user);
+		return n;
 	}
 
+
+	@Override
+	public Integer userlogin(String userName, String userPassword)throws Exception {
+		
+				
+				
+		return userDao.userlogin(userName, userPassword);
+	}
+	
 
 
 

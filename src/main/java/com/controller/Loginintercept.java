@@ -1,4 +1,4 @@
-package com.controller;
+/*package com.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,4 +42,4 @@ public class Loginintercept implements HandlerInterceptor {
 
 	}
 
-}
+}*/
